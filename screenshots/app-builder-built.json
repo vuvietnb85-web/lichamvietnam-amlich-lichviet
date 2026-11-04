@@ -1,0 +1,41 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Lịch Âm Việt",
+      "hasCanvas": false,
+      "bodyTextLen": 225,
+      "bodyTextHash": "4ad9f0e661c46340fa06310016449878ecbe5cf917ffd23ae007610bdfba55e7",
+      "bodyTextPrefix": "Tháng 10 năm 2026 25 Th10 · 1:47 CH 25 Sao lưu ngay CHỦ NHẬT Chạ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Lịch Âm Việt",
+      "hasCanvas": false,
+      "bodyTextLen": 225,
+      "bodyTextHash": "4ad9f0e661c46340fa06310016449878ecbe5cf917ffd23ae007610bdfba55e7",
+      "bodyTextPrefix": "Tháng 10 năm 2026 25 Th10 · 1:47 CH 25 Sao lưu ngay CHỦ NHẬT Chạ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": true,
+  "baselineReasons": [
+    "desktop: body text replaced (similar length, page start changed)",
+    "mobile: body text replaced (similar length, page start changed)"
+  ]
+}

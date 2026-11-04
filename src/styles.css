@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@import "@fontsource/be-vietnam-pro/latin-400.css";
+@import "@fontsource/be-vietnam-pro/latin-500.css";
+@import "@fontsource/be-vietnam-pro/latin-700.css";
+@import "@fontsource/be-vietnam-pro/latin-800.css";
+@import "@fontsource/be-vietnam-pro/latin-900.css";
+@import "@fontsource/be-vietnam-pro/vietnamese-400.css";
+@import "@fontsource/be-vietnam-pro/vietnamese-500.css";
+@import "@fontsource/be-vietnam-pro/vietnamese-700.css";
+@import "@fontsource/be-vietnam-pro/vietnamese-800.css";
+@import "@fontsource/be-vietnam-pro/vietnamese-900.css";
+
+@theme {
+  --font-sans: "Be Vietnam Pro", "FreeSans", "DejaVu Sans", sans-serif;
+  --color-ink: #24155f;
+  --color-muted: #43367a;
+  --color-leaf: #0e6b40;
+  --color-gold: #e0b15a;
+  --color-gold-ink: #7a4e00;
+  --color-paper: #fff9ee;
+  --color-cloud: #ffffff;
+  --color-sky-top: #c9f1ea;
+  --color-sky-mid: #b7e6d4;
+  --color-meadow: #f6e7c4;
+  --color-sand: #efd7a4;
+  --color-line: #e4d2a6;
+  --color-holiday: #9f2d24;
+  --color-skin: #f3c2a2;
+  --color-shirt: #ef7a2c;
+  --color-pants: #1d3f86;
+  --color-hair: #5a3824;
+  --color-blush: #e07a8a;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    background: var(--color-sky-top);
+  }
+  body {
+    margin: 0;
+    min-height: 100%;
+    overflow-x: clip;
+    background: var(--color-sky-top);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.45;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-leaf);
+    outline-offset: 2px;
+  }
+}
+
+.sky-bg {
+  background:
+    radial-gradient(90% 50% at 88% 0%, var(--color-cloud) 0%, transparent 42%),
+    linear-gradient(180deg, var(--color-sky-top) 0%, var(--color-sky-mid) 34%, var(--color-meadow) 70%, var(--color-sand) 100%);
+}
+
+.day-figure {
+  font-weight: 900;
+  font-size: clamp(4.25rem, 16vh, 7.25rem);
+  line-height: 0.86;
+  letter-spacing: -0.05em;
+  color: var(--color-ink);
+  -webkit-text-stroke: 0.05em var(--color-paper);
+  paint-order: stroke fill;
+}
+
+.weekday-label {
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.backup-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  padding: 0.45rem 0.95rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--color-ink) 18%, transparent);
+}
+
+.speech {
+  position: relative;
+  border-radius: 1.15rem;
+  background: var(--color-leaf);
+  color: var(--color-paper);
+  padding: 0.7rem 0.9rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  text-align: left;
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--color-leaf) 25%, transparent);
+}
+.speech::after {
+  content: "";
+  position: absolute;
+  right: 1.4rem;
+  bottom: -0.45rem;
+  border-width: 0.5rem 0.45rem 0 0;
+  border-style: solid;
+  border-color: var(--color-leaf) transparent transparent transparent;
+}
+
+.lunar-bar {
+  display: grid;
+  grid-template-columns: 0.9fr 0.72fr 1.25fr;
+  background: color-mix(in srgb, var(--color-paper) 82%, transparent);
+  border-top: 1px dashed var(--color-line);
+  backdrop-filter: blur(8px);
+  align-items: center;
+}
+.lunar-bar > * {
+  min-width: 0;
+}
+
+.dock {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  background: color-mix(in srgb, var(--color-paper) 94%, transparent);
+  border-top: 1px solid var(--color-line);
+  padding-bottom: max(0.35rem, env(safe-area-inset-bottom));
+}
+
+.topbar {
+  padding-top: max(0.45rem, env(safe-area-inset-top));
+}
+
+.press {
+  transition: transform 160ms ease;
+}
+.press:active {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .press {
+    transition: none;
+  }
+  .press:active {
+    transform: none;
+  }
+}
